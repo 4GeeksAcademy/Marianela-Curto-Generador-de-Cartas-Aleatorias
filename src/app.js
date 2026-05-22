@@ -34,4 +34,19 @@ window.onload = function() {
    }
   }
   generadorCard();
+
+  document.querySelector("#new-card").addEventListener("click", function(){
+    generadorCard();
+  });
+
+setInterval(generadorCard, 10000);
+
+document.querySelector("#resize-card").addEventListener("click", function(){
+  let width = document.querySelector("#card-width").value;
+  let height = document.querySelector("#card-height").value;
+
+  document.querySelector("#card").style.width = width + "px";
+  document.querySelector("#card").style.height = height  + "px";
+});
+
 };
